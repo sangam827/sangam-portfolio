@@ -1,0 +1,23 @@
+# Operating system / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and local backups
+*.log
+*.bak
+*.old
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencies / local tooling
+node_modules/
+.wrangler/
