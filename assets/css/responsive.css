@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Responsive rules
+   Desktop-first content, intentional mobile/tablet layouts
+   ========================================================================== */
+
+/* ---------- Large desktop refinement ---------- */
+@media (min-width: 1440px) {
+  .container { padding: 0 var(--space-8); }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  .container { padding: 0 var(--space-5); }
+
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-visual { order: -1; max-width: 360px; margin: 0 auto var(--space-6); }
+  .hero-title { font-size: var(--fs-3xl); }
+
+  .focus-grid { grid-template-columns: 1fr; }
+
+  .about-grid { grid-template-columns: 1fr; }
+
+  .project-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .journal-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .cert-card { grid-template-columns: auto 1fr; }
+}
+
+/* ---------- Compact desktop navigation ---------- */
+@media (min-width: 861px) and (max-width: 1200px) {
+  .brand-name .brand-role { font-size: 0.62rem; }
+  .nav-links { margin-left: 1.25rem; gap: 0.9rem; }
+  .nav-links a { font-size: 0.82rem; }
+}
+
+/* ---------- Mobile nav switch ---------- */
+@media (max-width: 860px) {
+  .nav-links { display: none; }
+  .nav-cta .btn-secondary.desktop-only { display: none; }
+  .nav-toggle { display: flex; }
+}
+
+@media (min-width: 861px) {
+  .mobile-menu { display: none !important; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  section { padding: var(--space-10) 0; }
+
+  .container { padding: 0 var(--space-4); }
+
+  .nav-inner { height: 64px; }
+  .brand-name .brand-role { display: none; }
+
+  .hero { padding: var(--space-10) 0 var(--space-8); }
+  .hero-title { font-size: var(--fs-2xl); }
+  .hero-role { font-size: var(--fs-base); }
+  .hero-desc { font-size: var(--fs-base); }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; }
+  .hero-meta { gap: var(--space-5); }
+  .hero-visual { max-width: 260px; }
+
+  .section-title { font-size: var(--fs-xl); }
+
+  .project-grid { grid-template-columns: 1fr; }
+  .project-top { flex-wrap: wrap; }
+
+  .skills-grid { grid-template-columns: 1fr; }
+
+  .journal-grid { grid-template-columns: 1fr; }
+
+  .timeline { padding-left: var(--space-6); }
+  .timeline-dot { left: calc(-1 * var(--space-6) + 1px); }
+
+  .cert-card { grid-template-columns: 1fr; text-align: left; }
+  .cert-meta { gap: var(--space-5); }
+
+  .footer-inner { flex-direction: column; }
+  .footer-links { flex-wrap: wrap; gap: var(--space-4); }
+  .footer-bottom { flex-direction: column; }
+}
+
+@media (max-width: 400px) {
+  .hero-meta { flex-direction: column; gap: var(--space-3); }
+}
